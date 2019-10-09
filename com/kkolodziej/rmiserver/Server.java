@@ -7,7 +7,7 @@ import java.rmi.server.UnicastRemoteObject;
 import com.kkolodziej.rmiinterface.RMIInterface;
 
 public class Server extends UnicastRemoteObject implements RMIInterface{
-
+    private static final long serialVersionUID = 1L;
     private int ac = 10;
 
     protected Server() throws RemoteException {
