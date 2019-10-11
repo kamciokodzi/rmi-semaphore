@@ -20,11 +20,12 @@ public class Client {
 
 		while (true) {
 			int rand = Math.abs(generator.nextInt()) % 10 + 1;
-			System.out.println("I am trying to take " + rand + " unit/s from semaphore!");
+			System.out.println("TRY TO TAKE " + rand + " UNITS");
 			String response = semaphore.P(rand);
-	    	System.out.println(response);
-			TimeUnit.SECONDS.sleep(1);
-			System.out.println("I am trying to return " + rand + " unit/s from semaphore!");
+			System.out.println(response);
+			System.out.println("Processing simulation...");
+			TimeUnit.SECONDS.sleep(2);
+			System.out.println("RETURN " + rand + " UNITS");
 			response = semaphore.V(rand);
 			System.out.println(response);
 		}
